@@ -46,7 +46,7 @@ var myPosition = {
 };
 
 if (mapContainer.clientWidth <= 500) {
-    zooom = 5.3
+    zooom = 5.48
 } else if (mapContainer.clientWidth <= 700) {
     zooom = 5.7
 } else if (mapContainer.clientWidth <= 1024) {

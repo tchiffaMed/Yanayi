@@ -54,6 +54,75 @@ body {
    }
 
   
+   /*Carte SVG*/
+   card-panel{
+    box-shadow: 5px 5px 10px #c9c9c9,
+    -5px -5px 10px #ffffff;
+    background: white;    
+    background: linear-gradient(to right, #1a2980, #26d0ce);
+}
+
+.heures{
+    background: linear-gradient(to right, #000428, #004e92); 
+    box-shadow: 5px 5px 10px #61cac8,
+    -5px -5px 10px #1a298046;
+}
+.localites{
+    box-shadow: 5px 5px 10px #1abebbc2,
+    -5px -5px 10px #1a298046;
+}
+.temperature{
+    font-size: 1em;
+}
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+h3, h1{
+    font-weight: 900;
+}
+.localite{
+    letter-spacing: 3px;
+}
+.localite, .heure{
+    font-size: 1em;
+   
+}
+a.btn{
+border: none;
+border-radius: 2rem;
+font-size: 1rem;
+background: linear-gradient(to right, #43c6ac, #191654);    
+color: white;
+margin: 5px auto;
+display: block;
+width: fit-content;
+}
+
+.btn:hover{
+background: transparent;
+color: teal;
+}
+
+.cachee {
+display: none;
+}
+
+.section{
+/*fill : #6300ee6e;*/
+transform-style: preserve-3d;
+perspective: 2000px;
+}
+
+.section .card-panel {
+transform: rotateX(-10deg);
+box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* .section .card-panel {
+transform: rotateY(180deg);
+box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+} */
 
    footer {
     position: fixed;

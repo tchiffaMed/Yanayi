@@ -103,7 +103,7 @@ img.src = `http://openweathermap.org/img/wn/${res.list[0].weather[0].icon}@2x.pn
                     meteo.style.position = "absolute"
             })
         }
-affiche(Bouza);
+ affiche(Bouza);
  affiche(Gaya);
  affiche(Dosso);
  affiche(Madarounfa);
@@ -114,8 +114,40 @@ affiche(Bouza);
 });
 
 
+let carte = document.getElementById('carte');
+let depart = document.getElementsByClassName('departm')
+let details = document.getElementById('details')
 
-   
+
+//console.log(depart);
+
+Array.from(depart).forEach(qcm => qcm.addEventListener('mouseover', (e) => {
+  // e.stopImmediatePropagation();
+ // console.log(e);
+ 
+  details.style.top = `${e.pageY}px`
+  details.style.left =`${e.pageX}px`
+  details.classList.remove('hide');
+  qcm.classList.remove('hide');
+  qcm.style.fill = 'rgba(0, 255, 255, 0.419)'
+  qcm.style.border = '4px'
+  qcm.style.cursor = 'pointer';
+        let municipale = qcm.getAttribute('inkscape:label')
+  details.children[0].children[0].children[1].children[1].textContent= municipale
+
+  qcm.addEventListener('mouseout', (ez) => {
+   // ez.stopImmediatePropagation();
+   // qcm.classList.add('hide');
+   qcm.style.fill = ''
+
+
+
+
+  })
+
+
+
+} ) );
  
 
 
